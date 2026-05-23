@@ -1,8 +1,3 @@
-/* ==========================================================================
-   TripAdvisor Clone Assignment - Premium Styling
-   Author: Beginner Frontend Developer Pair
-   ========================================================================== */
-
 /* Google Fonts Import */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
@@ -1067,8 +1062,7 @@ footer::before {
   }
 
   .btn-ai-plan {
-    padding: 6px 14px;
-    font-size: 12px;
+    display: none;
   }
 
   .hero-title {
@@ -1120,20 +1114,19 @@ footer::before {
   }
 
   .header-container {
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .header-nav {
-    width: 100%;
     justify-content: flex-end;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 12px;
+    gap: 10px;
+    flex-wrap: nowrap;
   }
 
   .btn-ai-plan {
-    flex: 1 1 140px;
-    min-width: 140px;
+    display: none !important;
+    visibility: hidden;
   }
 
   .header-language,
