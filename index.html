@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover and book your next vacation on the TripAdvisor India replica. Browse top-rated hotels, famous restaurants, and featured destinations across India. Created for educational assignment."
+    />
+    <title>TripAdvisor India: Read Reviews, Compare Prices & Book</title>
+
+    <!-- Link to the separated style.css sheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon using TripAdvisor owl icon -->
+    <link rel="icon" type="image/svg+xml" href="images/10122.svg" />
+  </head>
+  <body>
+    <!-- ==========================================================================
+       HEADER & NAVIGATION MENU (Screenshot Styled)
+       ========================================================================== -->
+    <header>
+      <div class="header-container">
+        <!-- TripAdvisor Branding Logo (Left) -->
+        <a
+          href="#"
+          class="header-logo"
+          id="header-logo-link"
+          aria-label="Tripadvisor Logo"
+        >
+          <img src="images/logo.svg" alt="Tripadvisor Logo" />
+        </a>
+
+        <!-- Header Navigation & Actions (Right) -->
+        <nav class="header-nav">
+          <!-- Plan with AI Pill Button (Symbol Removed) -->
+          <button class="btn-ai-plan" id="btn-header-ai">Plan with AI</button>
+
+          <!-- Navigation Menu Links -->
+          <ul class="nav-menu" id="nav-links-menu">
+            <li class="nav-item">
+              <a href="#destinations" id="nav-link-discover">Discover</a>
+            </li>
+            <li class="nav-item">
+              <a href="#hotels" id="nav-link-review">Review</a>
+            </li>
+            <li class="nav-item">
+              <a href="#restaurants" id="nav-link-more">More</a>
+            </li>
+          </ul>
+
+          <!-- Globe & Language Select -->
+          <div class="header-language" id="header-lang-selector">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.4z"
+              />
+            </svg>
+            <span>INR</span>
+          </div>
+
+          <!-- Profile Icon (Avatar using 10122.svg) -->
+          <div class="header-profile" id="header-profile-menu">
+            <img
+              src="images/10122.svg"
+              alt="User Profile"
+              class="profile-avatar"
+            />
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ==========================================================================
+       HERO SEARCH SECTION (Screenshot Styled - Solid White Background)
+       ========================================================================== -->
+    <section class="hero-section" id="hero-banner-section">
+      <div class="hero-content">
+        <h1 class="hero-title" id="main-hero-title">Where to?</h1>
+
+        <!-- Hero Navigation Categories -->
+        <div class="hero-category-nav" id="hero-category-nav">
+          <a href="#" class="hero-cat-item active" id="hero-cat-search">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+            </svg>
+            Search All
+          </a>
+          <a href="#" class="hero-cat-item" id="hero-cat-things">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path
+                d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
+              />
+            </svg>
+            Things to Do
+          </a>
+          <a href="#" class="hero-cat-item" id="hero-cat-hotels">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path
+                d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"
+              />
+            </svg>
+            Hotels
+          </a>
+          <a href="#" class="hero-cat-item" id="hero-cat-restaurants">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path
+                d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"
+              />
+            </svg>
+            Restaurants
+          </a>
+        </div>
+
+        <!-- Wide Search Pill Container -->
+        <div class="search-pill-container" id="search-pill-wrapper">
+          <span class="search-pill-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+              />
+            </svg>
+          </span>
+          <input
+            type="text"
+            class="search-pill-input"
+            id="search-pill-input"
+            placeholder="Places to go, things to do, hotels..."
+          />
+
+          <div class="search-pill-actions">
+            <button class="btn-ask-ai" id="btn-search-ask-ai">Ask AI</button>
+            <button class="btn-search-green" id="btn-search-execute">
+              Search
+            </button>
+          </div>
+        </div>
+
+        <!-- Integrated Assignment Filters -->
+        <div class="filter-pill-container" id="filter-pill-row">
+          <span class="filter-label">Filters:</span>
+
+          <select
+            class="filter-dropdown"
+            id="filter-price-range"
+            aria-label="Price range filter"
+          >
+            <option value="all">Price Range (All)</option>
+            <option value="budget">Budget (₹0 - ₹5,000)</option>
+            <option value="moderate">Moderate (₹5,000 - ₹15,000)</option>
+            <option value="luxury">Luxury (₹15,000+)</option>
+          </select>
+
+          <select
+            class="filter-dropdown"
+            id="filter-guest-rating"
+            aria-label="Guest rating filter"
+          >
+            <option value="all">Guest Rating (All)</option>
+            <option value="3">3.0+ Bubbles</option>
+            <option value="4">4.0+ Bubbles</option>
+            <option value="4.5">4.5+ Bubbles</option>
+          </select>
+
+          <select
+            class="filter-dropdown"
+            id="filter-sort-by"
+            aria-label="Sort by filter"
+          >
+            <option value="popular">Sort By: Popularity</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="top-reviewed">Top Reviewed</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       BRAND PROMO BANNER (Travelers' Choice Best of the Best)
+       ========================================================================== -->
+    <section class="brand-promo-section" id="promo-banner-section">
+      <div class="brand-promo-container">
+        <!-- Text details (Left) -->
+        <div class="brand-promo-left">
+          <h2 class="brand-promo-title">Book the best with the badge</h2>
+          <p class="brand-promo-subtitle">
+            The 2026 Travelers' Choice Best of the Best Things to Do are in, all
+            backed by travelers.
+          </p>
+        </div>
+
+        <!-- Replaced with the direct Travelers Choice Laurel Canyon image (Right) -->
+        <div class="brand-promo-right">
+          <img
+            src="images/promo-badge.jpg"
+            alt="2026 Travelers' Choice Best of the Best"
+            class="promo-badge-img"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       MAIN CONTENT AREA (Multi-column listings, custom stars/bubbles)
+       ========================================================================== -->
+    <main>
+      <!-- 1. FEATURED DESTINATIONS SECTION (CSS Grid Layout) -->
+      <section class="section-wrapper" id="destinations">
+        <div class="section-header">
+          <div class="section-title-area">
+            <h2 class="section-title">Featured Indian Destinations</h2>
+            <p class="section-subtitle">
+              Trending holiday spots based on traveler reviews
+            </p>
+          </div>
+          <a href="#" class="section-btn-link" id="link-explore-destinations">
+            Explore All
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Grid Container: 3 column layout -->
+        <div class="destinations-grid" id="destinations-listing-grid">
+          <!-- Destination Card 1 -->
+          <article class="destination-card" id="dest-card-delhi">
+            <div class="destination-img-wrap">
+              <img
+                src="images/10098.jpg"
+                alt="New Delhi street view and monuments"
+              />
+            </div>
+            <div class="destination-overlay">
+              <h3 class="destination-name">New Delhi</h3>
+              <span class="destination-properties"
+                >4,520 places to explore</span
+              >
+            </div>
+          </article>
+
+          <!-- Destination Card 2 -->
+          <article class="destination-card" id="dest-card-mumbai">
+            <div class="destination-img-wrap">
+              <img
+                src="images/10097.jpg"
+                alt="Mumbai skyline and Marine Drive scenery"
+              />
+            </div>
+            <div class="destination-overlay">
+              <h3 class="destination-name">Mumbai</h3>
+              <span class="destination-properties"
+                >3,890 places to explore</span
+              >
+            </div>
+          </article>
+
+          <!-- Destination Card 3 -->
+          <article class="destination-card" id="dest-card-bengaluru">
+            <div class="destination-img-wrap">
+              <img
+                src="images/10130.jpg"
+                alt="Bengaluru gardens and heritage palaces"
+              />
+            </div>
+            <div class="destination-overlay">
+              <h3 class="destination-name">Bengaluru</h3>
+              <span class="destination-properties"
+                >2,760 places to explore</span
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 2. POPULAR HOTELS SECTION (Grid with circular ratings & badges) -->
+      <section class="section-wrapper" id="hotels">
+        <div class="section-header">
+          <div class="section-title-area">
+            <h2 class="section-title">Popular Hotels in Demand</h2>
+            <p class="section-subtitle">
+              Exquisite hotels and luxury resorts featuring Travelers' Choice
+              badge
+            </p>
+          </div>
+          <a href="#" class="section-btn-link" id="link-explore-hotels">
+            See All Hotels
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Grid Container: 4 column card layout -->
+        <div class="cards-grid" id="hotels-listing-grid">
+          <!-- Hotel Card 1 -->
+          <article class="standard-card" id="hotel-card-taj">
+            <div class="badge-travelers-choice" id="badge-taj">
+              <img src="images/owl.svg" alt="Travelers' Choice Icon" />
+              <span class="badge-text">Travelers' Choice</span>
+            </div>
+            <div class="card-img-wrap">
+              <img
+                src="images/10131.jpg"
+                alt="The Taj Mahal Palace facade and pool view"
+              />
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Luxury Hotel | Mumbai</span>
+              <h3 class="card-title">The Taj Mahal Palace</h3>
+
+              <!-- Pure CSS Custom Bubble Rating -->
+              <div class="rating-row">
+                <div class="bubbles" aria-label="5 out of 5 bubbles">
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                </div>
+                <span class="rating-count">12,450 reviews</span>
+              </div>
+
+              <p class="card-snippet">
+                An iconic landmark of luxury overlooking the Arabian Sea,
+                featuring legendary heritage and royal chambers.
+              </p>
+              <div class="card-footer">
+                <span class="card-price-label">Price per night</span>
+                <span class="card-price-val">₹24,999</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Hotel Card 2 -->
+          <article class="standard-card" id="hotel-card-oberoi">
+            <div class="badge-travelers-choice" id="badge-oberoi">
+              <img src="images/owl.svg" alt="Travelers' Choice Icon" />
+              <span class="badge-text">Travelers' Choice</span>
+            </div>
+            <div class="card-img-wrap">
+              <img
+                src="images/10132.jpg"
+                alt="The Oberoi Udaivilas grand courtyards and lakes"
+              />
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Palace Resort | Udaipur</span>
+              <h3 class="card-title">The Oberoi Udaivilas</h3>
+
+              <div class="rating-row">
+                <div class="bubbles" aria-label="5 out of 5 bubbles">
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                </div>
+                <span class="rating-count">8,920 reviews</span>
+              </div>
+
+              <p class="card-snippet">
+                A magnificent palace resort spread over 50 acres of sprawling
+                gardens on the banks of historic Lake Pichola.
+              </p>
+              <div class="card-footer">
+                <span class="card-price-label">Price per night</span>
+                <span class="card-price-val">₹32,500</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Hotel Card 3 -->
+          <article class="standard-card" id="hotel-card-rambagh">
+            <div class="card-img-wrap">
+              <img
+                src="images/10133.jpg"
+                alt="Rambagh Palace manicured lawns and heritage rooms"
+              />
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Heritage Stay | Jaipur</span>
+              <h3 class="card-title">Rambagh Palace</h3>
+
+              <div class="rating-row">
+                <div class="bubbles" aria-label="4.5 out of 5 bubbles">
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble half"></span>
+                </div>
+                <span class="rating-count">6,110 reviews</span>
+              </div>
+
+              <p class="card-snippet">
+                Experience royal heritage at the former residence of the
+                Maharaja of Jaipur, showcasing absolute royalty.
+              </p>
+              <div class="card-footer">
+                <span class="card-price-label">Price per night</span>
+                <span class="card-price-val">₹28,400</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Hotel Card 4 -->
+          <article class="standard-card" id="hotel-card-evolve">
+            <div class="badge-travelers-choice" id="badge-evolve">
+              <img src="images/owl.svg" alt="Travelers' Choice Icon" />
+              <span class="badge-text">Travelers' Choice</span>
+            </div>
+            <div class="card-img-wrap">
+              <img
+                src="images/10134.jpg"
+                alt="Evolve Back Kabini wildlife huts and waterfront view"
+              />
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Wilderness Resort | Kabini</span>
+              <h3 class="card-title">Evolve Back, Kabini</h3>
+
+              <div class="rating-row">
+                <div class="bubbles" aria-label="5 out of 5 bubbles">
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                </div>
+                <span class="rating-count">4,730 reviews</span>
+              </div>
+
+              <p class="card-snippet">
+                A luxury wildlife resort inspired by traditional tribal designs,
+                situated on the banks of the serene Kabini River.
+              </p>
+              <div class="card-footer">
+                <span class="card-price-label">Price per night</span>
+                <span class="card-price-val">₹21,800</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. TOP-RATED RESTAURANTS SECTION -->
+      <section class="section-wrapper" id="restaurants">
+        <div class="section-header">
+          <div class="section-title-area">
+            <h2 class="section-title">Top-Rated Restaurants</h2>
+            <p class="section-subtitle">
+              Exquisite culinary experiences, trending cafes, and iconic
+              eateries
+            </p>
+          </div>
+          <a href="#" class="section-btn-link" id="link-explore-restaurants">
+            View All Restaurants
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Grid Container: 4 column layout -->
+        <div class="cards-grid" id="restaurants-listing-grid">
+          <!-- Restaurant Card 1 -->
+          <article class="standard-card" id="rest-card-accent">
+            <div class="badge-travelers-choice" id="badge-rest-accent">
+              <img src="images/owl.svg" alt="Travelers' Choice Icon" />
+              <span class="badge-text">Travelers' Choice</span>
+            </div>
+            <div class="card-img-wrap">
+              <img
+                src="images/10135.jpg"
+                alt="Indian Accent modern food presentation and fine dining"
+              />
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Modern Indian | ₹₹₹₹</span>
+              <h3 class="card-title">Indian Accent</h3>
+
+              <div class="rating-row">
+                <div class="bubbles" aria-label="5 out of 5 bubbles">
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                </div>
+                <span class="rating-count">9,840 reviews</span>
+              </div>
+
+              <p class="card-snippet">
+                Inventive modern Indian cuisine prepared by showcasing global
+                techniques with absolute dining refinement.
+              </p>
+              <div class="card-footer">
+                <span class="card-price-label">Popularity</span>
+                <span class="card-rating-text">#1 in New Delhi</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Restaurant Card 2 -->
+          <article class="standard-card" id="rest-card-peshawri">
+            <div class="card-img-wrap">
+              <img
+                src="images/10147.jpg"
+                alt="Peshawri traditional tandoori dishes and kebabs"
+              />
+            </div>
+            <div class="card-body">
+              <span class="card-tag">North Indian | ₹₹₹</span>
+              <h3 class="card-title">Peshawri, ITC Maratha</h3>
+
+              <div class="rating-row">
+                <div class="bubbles" aria-label="5 out of 5 bubbles">
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                </div>
+                <span class="rating-count">5,610 reviews</span>
+              </div>
+
+              <p class="card-snippet">
+                Recreating the rustic charm of the traditional clay tandoor
+                cooking of the rugged Northwest Frontier.
+              </p>
+              <div class="card-footer">
+                <span class="card-price-label">Popularity</span>
+                <span class="card-rating-text">#3 in Mumbai</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Restaurant Card 3 -->
+          <article class="standard-card" id="rest-card-villashanti">
+            <div class="card-img-wrap">
+              <img
+                src="images/10148.jpg"
+                alt="Villa Shanti boutique cafe courtyard dining"
+              />
+            </div>
+            <div class="card-body">
+              <span class="card-tag">French & Cafe | ₹₹</span>
+              <h3 class="card-title">Villa Shanti</h3>
+
+              <div class="rating-row">
+                <div class="bubbles" aria-label="4.5 out of 5 bubbles">
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble half"></span>
+                </div>
+                <span class="rating-count">3,920 reviews</span>
+              </div>
+
+              <p class="card-snippet">
+                A gorgeous French-colonial restaurant in Pondicherry serving
+                clean French recipes and continental treats.
+              </p>
+              <div class="card-footer">
+                <span class="card-price-label">Popularity</span>
+                <span class="card-rating-text">#1 in Pondicherry</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Restaurant Card 4 -->
+          <article class="standard-card" id="rest-card-glenarys">
+            <div class="card-img-wrap">
+              <img
+                src="images/10149.jpg"
+                alt="Glenary's bakery display and heritage architecture"
+              />
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Bakery & British | ₹</span>
+              <h3 class="card-title">Glenary's Bakery & Pub</h3>
+
+              <div class="rating-row">
+                <div class="bubbles" aria-label="4.5 out of 5 bubbles">
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble filled"></span>
+                  <span class="bubble half"></span>
+                </div>
+                <span class="rating-count">7,230 reviews</span>
+              </div>
+
+              <p class="card-snippet">
+                A historic bakery in Darjeeling offering legendary pastries,
+                fresh Darjeeling tea, and a warm British pub atmosphere.
+              </p>
+              <div class="card-footer">
+                <span class="card-price-label">Popularity</span>
+                <span class="card-rating-text">#2 in Darjeeling</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================================================
+       FOOTER COMPONENT
+       ========================================================================== -->
+    <footer id="footer">
+      <div class="footer-top">
+        <!-- Footer Brand Column -->
+        <div class="footer-brand" id="footer-branding-column">
+          <a
+            href="#"
+            class="footer-brand-logo"
+            aria-label="Tripadvisor Footer Logo"
+          >
+            <img src="images/logo.svg" alt="Tripadvisor Logo" />
+          </a>
+          <p class="footer-brand-desc">
+            TripAdvisor, the world's largest travel guidance platform, helps
+            hundreds of millions of people each month become better travelers.
+          </p>
+        </div>
+
+        <!-- Footer Link Column 1 -->
+        <div class="footer-column" id="footer-about-links">
+          <h4 class="footer-title">About Tripadvisor</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Press & Media</a></li>
+            <li><a href="#">Resources & Policies</a></li>
+            <li><a href="#">Trust & Safety</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Link Column 2 -->
+        <div class="footer-column" id="footer-explore-links">
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#hotels">Write a Review</a></li>
+            <li><a href="#destinations">Add a Place</a></li>
+            <li><a href="#">Join Community</a></li>
+            <li><a href="#">Traveler's Choice Badges</a></li>
+            <li><a href="#">Green Leaders</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Link Column 3 -->
+        <div class="footer-column" id="footer-business-links">
+          <h4 class="footer-title">Do Business With Us</h4>
+          <ul class="footer-links">
+            <li><a href="#">Owners & Managers</a></li>
+            <li><a href="#">Business Advantage</a></li>
+            <li><a href="#">Advertise With Us</a></li>
+            <li><a href="#">Content API Integrations</a></li>
+            <li><a href="#">Affiliate Programs</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p class="footer-copy" id="footer-copyright-text">
+          &copy; 2026 TripAdvisor LLC. All rights reserved. Replica created for
+          high-fidelity frontend developer assignment.
+        </p>
+
+        <!-- Social Media Links (Animated) -->
+        <div class="footer-socials" id="footer-social-networks">
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.8c4.56-.93 8-4.96 8-9.8z"
+              ></path>
+            </svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Twitter">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+              ></path>
+            </svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
+              ></path>
+            </svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="YouTube">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.517 0-9.388.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.507 9.388.507 9.388.507s7.518 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
